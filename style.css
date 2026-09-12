@@ -1,0 +1,473 @@
+:root {
+    --main-color: #d3ad7f;
+    --black: #6d0808;
+    --bg: #2d0000; 
+    --border: 0.1rem solid rgba(255,255,255,0.3);
+    font-size: 10px;
+}
+
+* {
+
+    margin: 0;
+    padding: 0;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: 0.2s linear;
+    font-family: "Roboto", sans-serif;
+}
+
+body {
+    background-color: var(--bg);
+}
+
+section {
+    padding: 3rem 2rem;
+    margin: 0 auto;
+    max-width: 1200px;
+
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 99;
+    border-bottom: var(--border);
+    background-color: var(--bg);
+}
+
+.header section{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 1,5rem;
+    padding-bottom: 1.5rem;
+}
+.navbar a {
+    margin: 0 1rem;
+    font-size: 1.8rem;
+    color: #fff;
+}
+
+.navbar a:hover {
+    color: #d3ad7f;
+    border-bottom:var #d3ad7f;
+    padding-bottom: 2rem;
+
+}
+
+.icons img{
+    margin:1rem;
+    cursor: pointer;
+}
+
+.icons img:hover {
+    width: 40px;
+    height: 40px;
+}
+.btn {
+    background: #7b542f;
+    color: #fff;
+    padding: 1rem;
+    font-size: 1.7rem;
+    cursor: pointer;
+    margin-top: 1rem;
+}
+    
+
+.btn:hover{
+    letter-spacing: 0.1rem;
+}
+
+
+.home-container {
+    background: url(./images\ \(1\).jpg); 
+    height: 1oovh;
+    background-position: center;
+    background-size: cover;
+}
+
+
+.home-container section{
+    display: flex;
+    align-items: center;
+   min-height: 100vh;
+}
+
+.content {
+    max-width: 60rem;
+}
+
+.content h3{
+    color: #fff;
+    font-size: 6rem;
+}
+
+.content p {
+    color:#fff;
+    font-size: 2rem;
+    font-weight: 100;
+    line-height: 1,8;
+    padding: 1rem 0;
+}
+
+.title{
+    font-size: 4rem;
+    color: var(--main-color);
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 4rem;
+}
+
+.title span{
+    color: #fff;
+    text-transform: uppercase;
+}
+
+
+.about .row {
+    display: flex;
+    align-items: center;
+    background-color: var(--black);
+    gap: 1.5rem;
+}
+
+.about .row .content {
+    padding: 2rem;
+}
+
+.about .row .content h3 {
+    font-size: 3rem;
+    color: #fff;
+
+}
+
+.about .row .content p {
+    font-size: 1.6rem;
+    color: #fff;
+    padding: 1 rem 0;
+    line-height: 1.8rem;
+}
+
+.box-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap: 1.5rem;
+}
+
+.menu .box-container .box{
+    text-align: center;
+    border: var(--border);
+    padding: 5rem;
+    cursor: pointer;
+}
+
+.menu .box-container .box img{
+    height: 10rem;
+}
+
+.menu .box-container .box h3{
+    color: #fff;
+    font-size: 2rem;
+    padding: 1rem 0;
+}
+
+.menu .box-container .box .price {
+    color: #fff;
+    font-size: 2.5rem;
+    padding: 0.5rem 0;
+}
+
+.menu .box-container .box .price span{
+    font-size: o.5rem;
+    text-decoration: line-through;
+    font-weight: lighter;
+}
+
+.menu .box-container .box:hover {
+    background-color: #fff;
+}
+
+.menu .box-container .box:hover>*{
+    color: var(--black)
+}
+
+ .review .box-container .box  {
+    border: var(--border);
+    text-align: center;
+    padding: 3rem 2rem;
+ }  
+
+ .review .box-container .box p {
+    font-size: 1.5rem;
+    color: #fff;
+    padding: 2rem 0;
+    line-height: 1.8;
+    font-weight: lighter;
+ }
+
+ .review .box-container .box h3 {
+    color: #fff;
+    font-size: 2rem;
+    margin: 1rem 0;
+ }
+
+ .review .box-container .box .user {
+    height:7rem;
+    width: 7rem;
+    border-radius: 50%;
+ }
+
+ .adress {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+ }
+ .footer {
+   text-align: center;
+ }
+
+ .footer .share{
+     padding: 1rem0;
+ }
+
+.footer .share img {
+    margin: 0.3;
+    cursor: pointer;
+    border-radius: 50%;
+    padding: 1rem;
+}
+
+.footer .share img:hover {
+    background-color:#d3ad7f
+
+}
+
+
+/* =========================================
+   CELULAR
+========================================= */
+
+@media (max-width: 768px) {
+
+    :root {
+        font-size: 9px;
+    }
+
+    section {
+        padding: 3rem 1.5rem;
+    }
+
+    /* HEADER */
+
+    .header section {
+        padding: 1rem 1.5rem;
+    }
+
+    .logo img {
+        width: 90px;
+    }
+
+    /* Esconde menu no celular */
+
+    .navbar {
+        display: none;
+    }
+
+    /* ÍCONES */
+
+    .icons img {
+        width: 26px;
+        height: 26px;
+        margin: 0.3rem;
+    }
+
+    /* HOME */
+
+    .home-container {
+        min-height: 100svh;
+
+        background-position: center;
+    }
+
+    .home-container section {
+        min-height: 100svh;
+        padding: 8rem 2rem 4rem;
+    }
+
+    .content {
+        width: 100%;
+    }
+
+    .content h3 {
+        font-size: 3.5rem;
+        line-height: 1.2;
+    }
+
+    .content p {
+        font-size: 1.6rem;
+        line-height: 1.7;
+    }
+
+    .btn {
+        font-size: 1.5rem;
+        padding: 1rem 1.5rem;
+    }
+
+    /* TÍTULOS */
+
+    .title {
+        font-size: 3rem;
+        margin-bottom: 3rem;
+    }
+
+    /* SOBRE */
+
+    .about .row {
+        flex-direction: column;
+        padding: 1rem;
+    }
+
+    .about .row .content {
+        padding: 1.5rem;
+    }
+
+    .about .row .content h3 {
+        font-size: 2.5rem;
+    }
+
+    /* SERVIÇOS */
+
+    .menu .box-container {
+        grid-template-columns: 1fr;
+    }
+
+    .menu .box-container .box {
+        padding: 2rem 1.5rem;
+    }
+
+    .menu .box-container .box img {
+        width: 100%;
+        max-width: 22rem;
+        height: auto;
+        aspect-ratio: 1 / 1;
+        object-fit: cover;
+    }
+
+    .menu .box-container .box h3 {
+        font-size: 1.8rem;
+    }
+
+    /* MAPA */
+
+    .adress iframe {
+        width: 100%;
+        height: 300px;
+    }
+
+    /* FOOTER */
+
+    .footer .share img {
+        width: 38px;
+        height: 38px;
+    }
+}
+
+
+/* =========================================
+   CELULARES PEQUENOS
+========================================= */
+
+@media (max-width: 480px) {
+
+    :root {
+        font-size: 8.5px;
+    }
+
+    .logo img {
+        width: 75px;
+    }
+
+    .icons img {
+        width: 23px;
+        height: 23px;
+        margin: 0.2rem;
+    }
+
+    .content h3 {
+        font-size: 3rem;
+    }
+
+    .content p {
+        font-size: 1.5rem;
+    }
+
+    .content .btn {
+        width: 100%;
+        font-size: 1.4rem;
+    }
+
+    .title {
+        font-size: 2.6rem;
+    }
+
+    .menu .box-container .box {
+        padding: 2rem 1rem;
+    }
+
+    .menu .box-container .box img {
+        max-width: 18rem;
+    }
+
+    .adress iframe {
+        height: 280px;
+    }
+}
+
+@media (max-width: 768px) {
+
+/* CABEÇALHO */
+.header section {
+padding: 0.8rem 1rem;
+}
+
+.logo img {
+width: 75px;
+height: auto;
+}
+
+.navbar {
+display: none;
+}
+
+.icons {
+display: flex;
+gap: 0.2rem;
+}
+
+.icons img {
+width: 25px;
+height: 25px;
+margin: 0.2rem;
+}
+
+/* TEXTOS */
+.content h3 {
+font-size: 3.2rem;
+}
+
+.content p {
+font-size: 1.5rem;
+}
+
+.btn {
+font-size: 1.4rem;
+}
+
+.title {
+font-size: 2.8rem;
+}
+}
